@@ -11,9 +11,7 @@ base_url = 'http://localhost:3000'
 f = open('prediction-strategies.json')
 strategies = json.load(f)
 f.close()
- 
-# Iterating through the json
-# list
+
 for strategy in strategies:
     _model_id = strategy['id']
     _name = strategy['name']
