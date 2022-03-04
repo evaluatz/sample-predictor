@@ -36,7 +36,9 @@ class Predict:
             logging.info('Waiting to update {name}'.format(name=self.name))
             time.sleep(1)
 
+        logging.info('Loading data {name}'.format(name=self.name))
         r = requests.get(self.url_historic)
+        logging.info('Doing the magic {name}'.format(name=self.name))
         jsonObj = r.json()
         historic_data = pd.DataFrame(jsonObj['data'], columns=jsonObj['headers']).set_index("id").astype(float)
         df = self.formatter(historic_data)

@@ -4,6 +4,7 @@ import schedule
 import time
 
 from predict import Predict
+import logging
 
 # Base Parameters
 base_url = 'https://api.evaluatz.com'
@@ -30,6 +31,7 @@ schedule.every().hour.at(":15").do(job)
 schedule.every().hour.at(":30").do(job)
 schedule.every().hour.at(":45").do(job)
 
+logging.info('Ready!')
 while True:
     schedule.run_pending()
     time.sleep(1)
