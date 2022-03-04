@@ -1,30 +1,34 @@
 [
   {
-    "name": "Evaluatz Predictor1 BTCUSDT [Low]",
-    "id": "2c99688f-3a55-460a-9c88-d5240f8c8d23",
-    "secret": "cc81013b-42a3-44c0-ae57-5acfc2687366",
-    "symbol": "BTCUSDT",
-    "feature": "low"
-  },
-  {
+    "id": "787fa34b-455a-43c6-a920-46e5aea5ba54",
+    "secret": "4a6008f6-fa6f-43e8-839f-a6537907db46",
     "name": "Evaluatz Predictor1 BTCUSDT [high]",
-    "id": "8e6dd2c7-b369-44ae-a12a-c439486ae4be",
-    "secret": "c637a1b1-ba22-470b-81b1-2dd53af204c3",
+    "description": "Evaluatz Predictor1 BTCUSDT [high]",
     "symbol": "BTCUSDT",
     "feature": "high"
   },
   {
+    "id": "fea8383b-9adf-4edd-96c6-e82856621935",
+    "secret": "4227bbee-b4fe-40cc-85a0-ebccacd238a8",
+    "name": "Evaluatz Predictor1 BTCUSDT [low]",
+    "description": "Evaluatz Predictor1 BTCUSDT [low]",
+    "symbol": "BTCUSDT",
+    "feature": "low"
+  },
+  {
+    "id": "50f3bf7d-bdff-40df-9aaf-57b0171a90d6",
+    "secret": "4e60fe19-736e-4ace-b6e8-a66de5717a2a",
     "name": "Evaluatz Predictor1 BTCBUSD [low]",
-    "id": "2c7b2fb7-5d74-4e8b-861f-807d9689f72a",
-    "secret": "1c9a3c5b-ba9c-43fd-b067-baad0c04dd6b",
+    "description": "Evaluatz Predictor1 BTCBUSD [low]",
     "symbol": "BTCBUSD",
     "feature": "low"
   },
   {
+    "id": "8c98865f-1d24-4130-8d44-368e2c78cf03",
+    "secret": "75bc12af-0cf0-4595-af65-abfe7e9405b6",
     "name": "Evaluatz Predictor1 BTCBUSD [high]",
-    "id": "5780c9ef-ac90-4fc6-84db-641ecac1a2f9",
-    "secret": "257e9de9-2927-4e65-877d-a967fc84d275",
+    "description": "Evaluatz Predictor1 BTCBUSD [high]",
     "symbol": "BTCBUSD",
-    "feature": "low"
+    "feature": "high"
   }
 ]

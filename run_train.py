@@ -5,7 +5,7 @@ import json
 from train import Train
 
 # Base Parameters
-base_url = 'http://localhost:3000'
+base_url = 'https://api.evaluatz.com'
 
 
 f = open('prediction-strategies.json')
