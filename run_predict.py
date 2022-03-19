@@ -1,37 +1,34 @@
-import threading
 import json
-import schedule
-import time
-
-from predict import Predict
-import logging
+import subprocess
 
 # Base Parameters
 base_url = 'https://api.evaluatz.com'
+#base_url = 'http://200.98.82.81'
 
 
 f = open('prediction-strategies.json')
 strategies = json.load(f)
 f.close()
 
+processes = []
 
-def job():
-    for strategy in strategies: 
-        _model_id = strategy['id']
-        _secret = strategy['secret']
-        _name = strategy['name']
-        _formatter = 'default'
-        _symbol = strategy['symbol'] 
+for strategy in strategies: 
+    _model_id = strategy['id']
+    _secret = strategy['secret']
+    _name = strategy['name']
+    _formatter = 'default'
+    _symbol = strategy['symbol'] 
 
-        predict = Predict(_name, _model_id, _secret,  _formatter, _symbol, base_url)
-        threading.Thread(target=predict.run, args=()).start()
+    processExec = ["C:\Python310\python.exe", "C:\\Users\\guign\\Documents\\00-Projects\\sample-predictor\\execute_predict.py"]
+    processExec.extend(["-n", _name])
+    processExec.extend(["-m", _model_id])
+    processExec.extend(["-x", _secret])
+    processExec.extend(["-f", _formatter])
+    processExec.extend(["-s", _symbol])
+    processExec.extend([ "-b", base_url])
+    p = subprocess.Popen(processExec)
+    processes.append(p)
 
-schedule.every().hour.at(":00").do(job)
-schedule.every().hour.at(":15").do(job)
-schedule.every().hour.at(":30").do(job)
-schedule.every().hour.at(":45").do(job)
 
-logging.info('Ready!')
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+for p in processes:
+    p.wait()

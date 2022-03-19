@@ -6,6 +6,7 @@ from train import Train
 
 # Base Parameters
 base_url = 'https://api.evaluatz.com'
+#base_url = 'http://200.98.82.81'
 
 
 f = open('prediction-strategies.json')
@@ -21,4 +22,5 @@ for strategy in strategies:
     _formatter = 'default'
 
     train = Train(_name, _model_id, _modelTemplate, _formatter, _feature, _symbol, base_url)
+    #train.run()
     threading.Thread(target=train.run, args=()).start()

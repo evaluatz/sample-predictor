@@ -55,8 +55,8 @@ class ModelTemplates:
         model.fit(
             x=df_train, 
             y=df_train_target,
-            epochs=20,
-            verbose=0,
+            epochs=50,
+            verbose=1,
             validation_data=(df_cross_validation, df_cross_validation_target),
         )
 
